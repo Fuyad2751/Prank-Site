@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background: #0a0a0a;
+    color: #ff0000;
+    min-height: 100vh;
+    padding: 20px;
+    cursor: none; /* কার্সার হাইড */
+}
+
+/* গ্লিচ ইফেক্ট */
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-3px, 3px); }
+    40% { transform: translate(-3px, -3px); }
+    60% { transform: translate(3px, 3px); }
+    80% { transform: translate(3px, -3px); }
+    100% { transform: translate(0); }
+}
+
+/* ব্লিংক */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* ইমোজি ফল */
+@keyframes emojiFall {
+    0% { 
+        transform: translateY(0) rotate(0deg); 
+        opacity: 1; 
+    }
+    100% { 
+        transform: translateY(400px) rotate(720deg); 
+        opacity: 0; 
+    }
+}
+
+/* ভূমিকম্প */
+@keyframes earthquake {
+    0%, 100% { transform: translate(0, 0); }
+    10% { transform: translate(-10px, 5px); }
+    20% { transform: translate(10px, -5px); }
+    30% { transform: translate(-5px, 10px); }
+    40% { transform: translate(5px, -10px); }
+    50% { transform: translate(-15px, 0); }
+    60% { transform: translate(15px, 0); }
+    70% { transform: translate(0, -15px); }
+    80% { transform: translate(0, 15px); }
+    90% { transform: translate(-8px, 8px); }
+}
+
+.prank-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.alert-box {
+    padding: 30px;
+    background: rgba(255, 0, 0, 0.1);
+    border: 3px solid #ff0000;
+    border-radius: 15px;
+    box-shadow: 0 0 30px #ff0000, inset 0 0 30px #ff0000;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { box-shadow: 0 0 30px #ff0000; }
+    50% { box-shadow: 0 0 60px #ff0000; }
+}
+
+.warning {
+    font-size: 36px;
+    color: #ff0000;
+    animation: blink 0.3s infinite;
+    text-shadow: 0 0 10px #ff0000;
+}
+
+.virus-count {
+    font-size: 28px;
+    margin: 20px 0;
+    color: #ffff00;
+    font-weight: bold;
+}
+
+.danger-text {
+    color: #ff6600;
+    font-size: 18px;
+    margin: 15px 0;
+    animation: dangerBlink 1s infinite;
+}
+
+@keyframes dangerBlink {
+    0%, 100% { color: #ff6600; }
+    50% { color: #ff0000; }
+}
+
+.btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+    font-family: 'Courier New', monospace;
+}
+
+.btn-danger {
+    background: #ff0000;
+    color: #fff;
+}
+
+.btn-warning {
+    background: #ff6600;
+    color: #fff;
+}
+
+.terminal {
+    background: #000;
+    color: #00ff00;
+    padding: 20px;
+    margin: 20px 0;
+    height: 200px;
+    overflow-y: auto;
+    text-align: left;
+    border: 2px solid #00ff00;
+    box-shadow: 0 0 20px #00ff00;
+    font-size: 14px;
+    cursor: text;
+}
+
+.progress-container {
+    margin-top: 30px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 30px;
+    background: #333;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 10px 0;
+    border: 2px solid #ff0000;
+}
+
+.progress {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #ff0000, #ff6600, #ffff00);
+    transition: width 0.1s;
+}
+
+#progress-text {
+    color: #ffff00;
+    font-size: 14px;
+}

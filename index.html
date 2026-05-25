@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚠️ জরুরি সতর্কতা! আপনার পিসি হ্যাক হয়েছে! ⚠️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ফেক ক্যামেরা -->
+    <div class="camera-feed">
+        <p>🔴 লাইভ রেকর্ডিং</p>
+        <div class="camera-box">
+            <div class="camera-scan">📷</div>
+            <div class="scan-line"></div>
+        </div>
+        <p>আপনার ক্যামেরা অ্যাক্সেস করা হয়েছে!</p>
+    </div>
+
+    <div class="prank-container">
+        <div class="alert-box">
+            <h1 class="warning">⚠️ সতর্কতা! আপনার ডিভাইস হ্যাক হয়েছে! ⚠️</h1>
+            <h2>মারাত্মক ভাইরাস সনাক্ত করা হয়েছে!</h2>
+            <p class="virus-count">মোট ভাইরাস: <span id="count">0</span></p>
+            <p class="danger-text">আপনার সব ফাইল এনক্রিপ্ট করা হচ্ছে...</p>
+            
+            <button id="runaway-btn" class="btn btn-danger">ভাইরাস সরান</button>
+            <button onclick="fakePopup()" class="btn btn-warning">বিনামূল্যে অ্যান্টিভাইরাস!</button>
+        </div>
+
+        <!-- ফেক টার্মিনাল -->
+        <div id="terminal" class="terminal"></div>
+
+        <!-- ফেক প্রগ্রেস -->
+        <div class="progress-container">
+            <h3>সিস্টেম স্ক্যান হচ্ছে...</h3>
+            <div class="progress-bar">
+                <div id="progress" class="progress"></div>
+            </div>
+            <p id="progress-text">অপেক্ষা করুন...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
